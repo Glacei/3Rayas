@@ -25,7 +25,7 @@ class ExampleInstrumentedTest {
     @Test
     fun testVictoriaHorizontal() {
         // Simulamos un tablero con 3 en raya en la fila superior
-        val board = listOf("X", "X", "X", "", "", "", "", "", "")
+        val board = listOf("X", "X", "", "X", "", "", "", "", "")
 
         // Comprobamos la lógica de victoria
         val haGanado = checkWinnerManual(board, "X")
