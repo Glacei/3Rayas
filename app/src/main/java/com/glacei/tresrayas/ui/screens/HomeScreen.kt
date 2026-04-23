@@ -22,7 +22,6 @@ fun HomeScreen(navController: NavController) {
 
         Button(
             // Ahora Routes.SETUP debería reconocerse
-            // TRACTOR
             onClick = { navController.navigate(Routes.SETUP) },
             modifier = Modifier.width(200.dp)
         ) {
@@ -40,3 +39,5 @@ fun HomeScreen(navController: NavController) {
         }
     }
 }
+
+// Feliz Jueves
