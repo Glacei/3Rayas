@@ -21,7 +21,7 @@ fun HomeScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(20.dp))
 
         Button(
-            // Ahora Routes.SETUP debería reconocerse
+            // Ahora Routes.SETUP debería reconocerse k
             onClick = { navController.navigate(Routes.SETUP) },
             modifier = Modifier.width(200.dp)
         ) {
