@@ -1,0 +1,44 @@
+name: Android CI TicTacToe
+
+# Punto 5: Se ejecuta al hacer push
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Java JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+      # Punto 5: Mensaje echo antes de construir
+      - name: Mensaje previo al Build
+        run: echo " Iniciant la construcció del projecte Tres en Ratlla..."
+
+      - name: Dar permisos de ejecución al Gradle
+        run: chmod +x gradlew
+
+      - name: Build con Gradle
+        run: ./gradlew assembleDebug
+
+      # Punto 5: Mensaje echo antes de los tests
+      - name: Mensaje previo a los Tests
+        run: echo " Executant els tests unitaris i instrumentats..."
+
+      - name: Run Unit Tests
+        run: ./gradlew test
+
+      # Punto 5: Mensaje final
+      - name: Mensaje Final
+        run: echo " Pipeline finalitzat correctament!"
