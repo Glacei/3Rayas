@@ -22,7 +22,6 @@ fun HomeScreen(navController: NavController) {
 
         Button(
             // Ahora Routes.SETUP debería reconocerse
-            // FELIZ JUEVES
             onClick = { navController.navigate(Routes.SETUP) },
             modifier = Modifier.width(200.dp)
         ) {
