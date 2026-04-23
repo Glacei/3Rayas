@@ -40,4 +40,4 @@ fun HomeScreen(navController: NavController) {
     }
 }
 
-// Feliz Jueves XD muy XD
+// Feliz Jueves XD muy XD en plan super XD
